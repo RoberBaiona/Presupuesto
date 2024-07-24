@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de impresión</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de impresión</h1>
+        <form id="formulario">
+            <div class="form-group">
+                <label for="nombre">Nombre de usuario:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <div class="invalid-feedback" id="nombre-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos de usuario:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+                <div class="invalid-feedback" id="apellidos-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email de usuario:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" name="telefono" required>
+                <div class="invalid-feedback" id="telefono-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto" required>
+                    <option value="100">Impresión básica (100€)</option>
+                    <option value="200">Impresión estándar (200€)</option>
+                    <option value="300">Impresión de alta calidad (300€)</option>
+                    <option value="400">Impresión de alta calidad con acabado (400€)</option>
+                    <option value="500">Impresión de alta calidad con acabado y montaje (500€)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="extras">Extras:</label>
+                <div class="extras-container">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="extra1" name="extra1" value="15"> Extra 1 (15€)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="extra2" name="extra2" value="15"> Extra 2 (15€)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="extra3" name="extra3" value="15"> Extra 3 (15€)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="extra4" name="extra4" value="15"> Extra 4 (15€)
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="extra5" name="extra5" value="15"> Extra 5 (15€)
+                    </label>
+                    <div class="invalid-feedback" id="extras-error">Debes seleccionar al menos un extra</div>
+                </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="plazo">Plazo:</label>
+                <input type="number" id="plazo" name="plazo" required max="5">
+            </div>
+            <div class="form-group">
+                <label for="presupuesto">Presupuesto estimado:</label>
+                <input type="number" id="presupuesto" name="presupuesto" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
