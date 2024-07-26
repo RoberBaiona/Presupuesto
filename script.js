@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('#nombre, #apellidos, #email, #telefono').val('');
     $('#producto').val('100');
     $('#plazo').val('1');
-    $('#presupuesto').val('10');
+    $('#presupuesto').val(parseInt($('#plazo').val()) * 20 + parseInt($('#producto').val()));
     $('input[type="checkbox"]').prop('checked', false);
 
     // Función para validar la primera parte del formulario
